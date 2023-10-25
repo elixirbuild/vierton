@@ -1,0 +1,344 @@
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../public/assets/font/IBM_Plex_Mono/IBMPlexMono-Medium.ttf");
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+:root {
+    --red: #ed1c24;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    background-size: cover;
+    animation: gradient-bg 20s infinite;
+    font-family: "IBM Plex Mono", monospace;
+    color: rgb(240, 240, 240);
+}
+
+a {
+    text-decoration: none;
+}
+
+.root {
+    width: 100vw;
+    min-width: 100vh;
+}
+
+.navbar {
+    max-width: 80pc;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .active-link {
+    opacity: 0.7;
+}
+
+.navbar ul {
+    list-style: none;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navbar .logo_container {
+    display: flex;
+    justify-content: flex-start;
+}
+.navbar .links {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+.navbar ul li {
+    display: flex;
+    justify-self: flex-end;
+}
+.navbar ul li a {
+    color: rgb(244, 244, 244);
+    display: flex;
+    justify-self: flex-end;
+    margin-left: 2rem;
+    font-size: 16px;
+    position: relative;
+}
+.navbar ul li .active-link .icon-thing {
+    opacity: 1;
+    top: -70%;
+    filter: saturate(5) blur(0rem) invert();
+    -webkit-filter: saturate(5) blur(0rem) invert();
+}
+.navbar ul li a .icon-thing {
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+    filter: saturate(5) blur(0.1rem) invert();
+    -webkit-filter: saturate(5) blur(0.1rem) invert();
+}
+.banner-uc {
+    filter: saturate(1)invert();
+    -webkit-filter: saturate(1) invert();
+    width: 100px !important;
+    height: 100px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    display: block;
+}
+.navbar ul li a:hover > .icon-thing {
+    opacity: 1;
+    transition: 0.15s;
+    top: -70%;
+    filter: saturate(5) blur(0rem) invert();
+    -webkit-filter: saturate(5) blur(0rem) invert();
+}
+.navbar ul li a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.navbar ul li .logo {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.logo img, .logo span{
+    display: inline;
+    vertical-align: middle;
+    font-size: 40px;
+    color: var(--red);
+    line-height: 3rem
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.main {
+    max-width: 100%;
+    min-height: 100vh;
+    width: 600px;
+    margin: auto;
+    color: rgb(244, 244, 244);
+}
+
+.main p {
+    font-size: 14px;
+}
+
+.logo_container a {
+    margin-left: 0 !important;
+}
+
+.main .banner {
+    width: 100%;
+}
+
+.main ul {
+    font-size: 14px;
+    list-style-type: square;
+}
+
+.main section {
+    background: rgba(128, 128, 128, 0.06);
+    border-radius: 12px;
+    padding: 0.5rem 2rem;
+}
+
+.c-link {
+    color: var(--red);
+    cursor: pointer;
+    transition: 1.2s ease;
+}
+.c-link:hover {
+    opacity: 0.5;
+    transition: 0.25s ease;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    background: #171717d6;
+}
+
+.footer a {
+    color: rgb(234, 234, 234);
+    opacity: 0.8;
+    display: inline;
+    vertical-align: middle;
+    font-size: 17px;
+    margin: 0 5px;
+}
+.footer a:hover {
+    opacity: 1;
+}
+
+.footer div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.social-bar {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.footer .legal-notes {
+    opacity: 0.7;
+    text-align: center;
+}
+.footer .legal-notes p, .footer .legal-notes a {
+    font-size: 12px;
+}
+
+.social-bar a {
+    color: rgb(244, 244, 244);
+    opacity: 0.8;
+    display: inline;
+    vertical-align: middle;
+    font-size: 17px;
+    margin: 0 5px;
+}
+
+.social-bar a:hover {
+    opacity: 1;
+}
+
+.credits-content {
+    color: grey;
+    opacity: 1;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    user-select: none;
+}
+
+.credits-content h4 {
+    padding-top: 1rem;
+}
+
+.credits-content article {
+    padding-bottom: 1rem;
+}
+
+.credits-content article .title { 
+    color: rgb(103, 103, 103);
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.credits-content article .desc {
+    font-size: 12px;
+} 
+
+.credits-content .overall {
+    text-align: center;
+    font-weight: 500;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.portfolio {
+    font-family: "Inter";
+}
+
+.portfolio .portfolio-item {
+    display: inline-block;
+        vertical-align: top;
+    width: calc(25% - 2rem);
+    padding: 20px;
+    cursor: pointer;
+    margin: 1rem;
+    background: rgb(24, 24, 24);
+    border-radius: 8px;
+}
+.portfolio-item .cover img {
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    transform: scale(1);
+    transition: 0.8s;
+    -webkit-box-shadow: 0px 18px 22px -11px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 18px 22px -11px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 18px 22px -11px rgba(0, 0, 0, 0.34);
+}
+.portfolio-item:hover > .cover img {
+    transform: scale(0.95);
+    transition: 0.25s;
+    -webkit-box-shadow: 0px 18px 98px -21px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0px 18px 98px -21px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 18px 98px -21px rgba(0, 0, 0, 0.7);;
+}
+.portfolio-item .title, .portfolio-latestrel .title {
+    margin: 0;
+    padding: 10px 0 0 0;
+    color: rgb(244, 244, 244);
+    z-index: 3;
+}
+.portfolio-item .title h2, .portfolio-latestrel .title h2 {
+    padding-bottom: 3px;
+    font-weight: 600;
+}
+.portfolio-item .title p, .portfolio-latestrel .title p {
+    color: grey;
+}
+.portfolio-item .title h2 .album-type, .portfolio-latestrel .title h2 {
+    font-size: 13px;
+    opacity: 0.7;
+}
+.portfolio-item .title *, .portfolio-latestrel .title * {
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-latestrel {
+    width: 100%;
+}
+.portfolio-latestrel .cover img {
+    width: 25%;
+    border-radius: 8px;
+    text-align: center;
+    transform: scale(1);
+    transition: 0.8s;
+    -webkit-box-shadow: 0px 18px 22px -11px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 18px 22px -11px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 18px 22px -11px rgba(0, 0, 0, 0.34);
+}
+
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
